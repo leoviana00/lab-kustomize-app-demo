@@ -126,8 +126,6 @@ main(){
     virtualbox_install
     vagrant_install
     ansible_install
-    lens_install
-    flameshot_install
 }
 
 main

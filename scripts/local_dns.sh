@@ -8,11 +8,8 @@ fi
 config_hosts(){
 echo "Setting DNS Local /etc/hosts"
 cat >>/etc/hosts<<EOF
-# Lab Harbor - Balanceador
-192.168.1.11   lb.lab.k8s.io
-
-# Lab Harbor - database
-192.168.1.11   db.lab.k8s.io
+# Lab Kustomize - DNS Local
+192.168.1.11   demo.app.lab.k8s.io
 EOF
 }
 
