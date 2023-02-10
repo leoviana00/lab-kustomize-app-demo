@@ -27,8 +27,8 @@
 
 - [x] [Gerar chave ssh](./k8s/keys/README.md)
 - [X] [Subir um balanceador com Docker](./loadbalancer/Readme.md)
-  - [x][Configurar DNS local no /etc/hosts](./scripts/local_dns.sh)
-  - [x][Registro de DNS e configuração de backends](./loadbalancer/haproxy/haproxy.cfg)
+  - [x] [Configurar DNS local no /etc/hosts](./scripts/local_dns.sh)
+  - [x] [Registro de DNS e configuração de backends](./loadbalancer/haproxy/haproxy.cfg)
 - [x] [Subir infra local com vagrant e virtualbox](./Vagrantfile)
 - [x] [Subir um Cluster Kubernetes](./kubespray/kubespray.md)
 - [x] [Instalação do ISTIO](./istio/)
@@ -39,7 +39,7 @@
     - [X] [Ambiente de desenvolvimento]
     - [x] [Ambiente de homologação]
     - [x] [Ambiente de produção]
-- [x][Apply deployments](./app/apply.sh)
+- [x] [Apply deployments](./app/Readme.md)
 
 
 ## 📄 Licença
