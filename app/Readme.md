@@ -6,26 +6,6 @@
   <img alt="tree" src="../images/tree.png">
 </p>
 
-- Deployment em multiplos ambientes
-
-- Development
-
-<p align="center">
-  <img alt="dev" src="../images/dev.png">
-</p>
-
-- Staging
-
-<p align="center">
-  <img alt="dev" src="../images/staging.png">
-</p>
-
-- Development
-
-<p align="center">
-  <img alt="prod" src="../images/prod.png">
-</p>
-
 ## Apply
 
 - Criando namespaces
@@ -54,3 +34,23 @@ kubectl apply -k overlays/production/
 ```bash
 kubectl delete -k overlays/development/
 ```
+
+- Deployment em multiplos ambientes
+
+- Development: http://demo.app.lab.k8s.io/dev
+
+<p align="center">
+  <img alt="dev" src="../images/dev.png">
+</p>
+
+- Staging: http://demo.app.lab.k8s.io/hom
+
+<p align="center">
+  <img alt="dev" src="../images/staging.png">
+</p>
+
+- Production: http://demo.app.lab.k8s.io/prod
+
+<p align="center">
+  <img alt="prod" src="../images/prod.png">
+</p>

@@ -35,7 +35,7 @@
 - [x] [Organizar estrutura de arquivos - Kustomize](./app/Readme.md)
   - [x] [Configurar DNS local para a aplicação no /etc/hosts](./scripts/local_dns.sh)
   - [x] [Criar arquivos base](./app/Readme.md)
-  - [x] [ Crar camadas de sobreposição - OVERLAYS](./app/Readme.md)
+  - [x] [ Criar camadas de sobreposição - OVERLAYS](./app/Readme.md)
     - [X] [Ambiente de desenvolvimento]
     - [x] [Ambiente de homologação]
     - [x] [Ambiente de produção]
