@@ -11,7 +11,7 @@ spec:
     repoURL: >-
       https://github.com/leoviana00/lab-kustomize-app-demo.git
     path: app/overlays/development
-    targetRevision: dev
+    targetRevision: main
     kustomize:
       commonAnnotations:
         app/kustomize: "true"
