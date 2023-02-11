@@ -38,9 +38,9 @@
   - [x] [Configurar DNS local para a aplicação no /etc/hosts](./scripts/local_dns.sh)
   - [x] [Criar arquivos base](./app/Readme.md)
   - [x] [ Criar camadas de sobreposição - OVERLAYS](./app/Readme.md)
-    - [X] [Ambiente de desenvolvimento]
-    - [x] [Ambiente de homologação]
-    - [x] [Ambiente de produção]
+    - [X] [Ambiente de desenvolvimento](./app/Readme.md)
+    - [x] [Ambiente de homologação](./app/Readme.md)
+    - [x] [Ambiente de produção](./app/Readme.md)
 - [x] [Apply deployments](./app/Readme.md)
 
 
