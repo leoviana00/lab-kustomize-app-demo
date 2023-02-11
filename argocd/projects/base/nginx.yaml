@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: demo-nginx
+  name: nginx
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
