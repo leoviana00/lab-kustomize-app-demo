@@ -13,6 +13,10 @@
   <img alt="k8s" src="../images/argo-kustomize.png">
 </p>
 
+<p align="center">
+  <img alt="k8s" src="../images/argocd.drawio.png">
+</p>
+
 
 ## Subindo as aplicações
 
