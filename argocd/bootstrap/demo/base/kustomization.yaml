@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: argo-cd
 
 resources:
-- ../../components/applicationsets/demo/development
-- ../../components/applicationsets/demo/staging
-- ../../components/applicationsets/demo/production
-- ../../components/argocdproj/demo
+- ../../../components/applicationsets/demo/overlays/development
+- ../../../components/applicationsets/demo/overlays/staging
+- ../../../components/applicationsets/demo/overlays/production
+- ../../../components/argocdproj/demo
