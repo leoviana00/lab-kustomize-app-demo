@@ -25,9 +25,9 @@ kubectl apply -f templates/
 - URL: http://argocd.lab.k8s.io
 
 <p align="center">
-  <img alt="k8s" src="../images/argo-1.png">
+  <img alt="k8s" src="../../images/argo-1.png">
 </p>
 
 <p align="center">
-  <img alt="k8s" src="../images/argo-2.png">
+  <img alt="k8s" src="../../images/argo-2.png">
 </p>
