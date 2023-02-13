@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+- demo-configmap.yaml
+
+namespace: demo-app-hom
+
+commonLabels:
+  app: demo-app-hom
+
+# patches using local files
+
+patchesStrategicMerge:
+# Resource and Limits
+- patch-demo-deployment.yaml
+# Replicas count
+- patch-demo-hpa.yaml
+# Gateway and prefix
+- patch-demo-vs.yaml
