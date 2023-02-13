@@ -4,18 +4,15 @@ kind: Kustomization
 resources:
 - ../../base
 
-commonLabels:
-  app: demo-app-hom
+patchesStrategicMerge:
+- patch-demo-app.application.yaml
 
-# patchesStrategicMerge:
-# - patch-demo-app.application.yaml
-
-patches:
-- patch: |-
-    - op: replace
-      path: /spec/source/path
-      value: argocd/tenants/demo/demo-app/overlays/development
-  target:
-    group: argoproj.io
-    version: v1alpha1
-    kind: ApplicationSet
+# patches:
+# - patch: |-
+#     - op: replace
+#       path: /spec/source/path
+#       value: argocd/tenants/demo/demo-app/overlays/development
+#   target:
+#     group: argoproj.io
+#     version: v1alpha1
+#     kind: ApplicationSet

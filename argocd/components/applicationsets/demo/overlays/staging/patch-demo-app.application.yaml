@@ -1,33 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
-  name: demo
+  name: demo-application
   namespace: argo-cd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
-  generators:
-  - git:
-      repoURL: https://github.com/leoviana00/lab-kustomize-app-demo.git
-      revision: main
-      directories:
-      - path: argocd/tenants/demo/demo-app/overlays
-  template:
-    metadata:
-      name: '{{path.basename}}'
-    spec:
-      project: demo
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-        retry:
-          limit: 15
-          backoff:
-            duration: 15s
-            factor: 2
-            maxDuration: 5m
-      source:
-        repoURL: https://github.com/leoviana00/lab-kustomize-app-demo.git
-        targetRevision: main
-        path: '{{path}}/staging'
-      destination:
-        server: https://kubernetes.default.svc
+  project: demo
+  source:
+    repoURL: >-
+      https://github.com/leoviana00/lab-kustomize-app-demo.git
+    path: argocd/tenants/demo/demo-app/overlays/staging
+    targetRevision: main
+    kustomize:
+      commonAnnotations:
+        app/kustomize: "true"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: demo-app-hom

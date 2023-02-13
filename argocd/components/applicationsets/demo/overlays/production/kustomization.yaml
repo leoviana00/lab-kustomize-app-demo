@@ -4,8 +4,5 @@ kind: Kustomization
 resources:
 - ../../base
 
-commonLabels:
-  app: demo-app-prod
-
 patchesStrategicMerge:
 - patch-demo-app.application.yaml

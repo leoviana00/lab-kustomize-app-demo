@@ -4,15 +4,5 @@ kind: Kustomization
 resources:
 - ../../base
 
-namespace: demo-app-hom
-
-commonLabels:
-  app: demo-app-hom
-
 patchesStrategicMerge:
 - patch-demo-app.application.yaml
-
-target:
-  group: argoproj.io
-  version: v1
-  kind: Application
