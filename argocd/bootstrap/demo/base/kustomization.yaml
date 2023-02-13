@@ -6,7 +6,7 @@ resources:
 # - ../../../components/argocdproj/overlays/development
 # - ../../../components/argocdproj/overlays/staging
 # - ../../../components/argocdproj/overlays/production
-- ../../../components/argocdproj/base
+- ../../../components/argocdproj/demo/base
 - ../../../components/applicationsets/demo/overlays/development
 - ../../../components/applicationsets/demo/overlays/staging
 - ../../../components/applicationsets/demo/overlays/production
