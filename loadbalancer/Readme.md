@@ -38,12 +38,12 @@
   - haproxy.env
   ```yaml
   #Global
-  LOGGER=10.0.2.206
+  LOGGER=192.168.1.11
 
   #Listen Stats
   LISTEN=*
   STATS=enable
-  STATSLP=admin:admin
+  STATSLP=admin:haproxy
   STATSURI=/stats
   STATSSHOW=Praticando Haproxy
   ABUSERS=/etc/haproxy/abuse.lst
@@ -54,27 +54,31 @@
   #Listen Kubernetes-apiserver-https
   SERVER=192.168.50
   PORT_K8S=6443
-  PORT_INGRESS_ISTIO=31987
+
+  # Portds Ingress Istio
+  HTTP_INGRESS_ISTIO=32651
+  HTTPS_INGRESS_ISTIO=30838
   ```
 
 - Criar arquivo de configuração haproxy
 - Ativar dashboardo haproxy
 - Adicionar o Cluster Kubernetes no haproxy
-- Adicionar serviço nginx ao haproxy
+- Adicionar o argocd
+- Adicionar serviço nginx de demonstração [ Ambiente dev, hom e prod]
 
   - haproxy.cfg
 
   ```yaml
   global
-      log "${LOGGER}:514" local0
-      log /dev/log  local0
-      log /dev/log  local1 notice
-      user haproxy
-      group haproxy
-      daemon
+    log "${LOGGER}:514" local0
+    log /dev/log  local0
+    log /dev/log  local1 notice
+    user haproxy
+    group haproxy
+    daemon
 
   defaults
-      log    global
+      log global
       mode http
       timeout client "${TIMEOUT}"
       timeout server "${TIMEOUT}"
@@ -98,7 +102,57 @@
       timeout client 3h
       timeout server 3h
       balance roundrobin
-      server K8S_M01 "${SERVER}.10:${PORT_K8S}" check check-ssl verify none inter 2000
+      server K8S_M01 "${SERVER}.11:${PORT_K8S}" check check-ssl verify none inter 2000
+
+  frontend web-demo
+      mode http
+      bind "${LISTEN}:80"
+      capture request header Host len 200
+      option forwardfor
+
+      acl dns_app hdr(host) -i demo.app.lab.k8s.io
+      acl dns_argocd hdr(host) -i argocd.lab.k8s.io
+      
+      # Config Demo ACL Argocd
+      acl path_argocd path_beg -i /
+      use_backend back_argocd if dns_argocd path_argocd
+
+      # Config Demo ACL App Ambiente DEV
+      acl path_app path_beg -i /dev
+      use_backend back_app_dev if dns_app path_app
+
+      # Config Demo ACL App Ambiente HOM
+      acl path_app path_beg -i /hom
+      use_backend back_app_hom if dns_app path_app
+
+      # Config Demo ACL App Ambiente PROD
+      acl path_app_prod path_beg -i /prod
+      use_backend back_app_prod if dns_app path_app_prod
+
+
+  backend back_argocd
+      mode http
+      balance leastconn
+      http-request set-header Host argocd.lab.k8s.io
+      server RR_K8S "${SERVER}.41:${HTTP_INGRESS_ISTIO}" check 
+
+  backend back_app_dev
+      mode http
+      balance leastconn
+      http-request set-header Host demo.app.lab.k8s.io
+      server RR_K8S "${SERVER}.41:${HTTP_INGRESS_ISTIO}" check 
+
+  backend back_app_hom
+      mode http
+      balance leastconn
+      http-request set-header Host demo.app.lab.k8s.io
+      server RR_K8S "${SERVER}.41:${HTTP_INGRESS_ISTIO}" check 
+
+  backend back_app_prod
+      mode http
+      balance leastconn
+      http-request set-header Host demo.app.lab.k8s.io
+      server RR_K8S "${SERVER}.41:${HTTP_INGRESS_ISTIO}" check 
 
 
   ```
@@ -108,7 +162,7 @@
 - Subindo o balanceador
 
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 - Derrubando o balanceador
