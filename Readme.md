@@ -46,7 +46,7 @@
 
 ## Gerenciamento dos deployments com o `argocd` e kustomize.
   - Serviço Argocd:
-    - [x] [Implatação do Argo Cd no cluster kubernetes](./argocd/chart/Readme.md)
+    - [x] [Implatação do Argo Cd no cluster kubernetes](https://github.com/leoviana00/lab-argocd-helm-k8s)
     - [x] [Configurar Gateway e virtualservice para expor acesso externo do argo]
     - [x] [Configuração de acl e backend para o argocd no balanceador externo]
   - Aplicação demonstração:
