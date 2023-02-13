@@ -24,7 +24,6 @@
 - Nginx
 
 ## 🚀 Etapas
-
 - [x] [Gerar chave ssh](./k8s/keys/README.md)
 - [X] [Subir um balanceador com Docker](./loadbalancer/Readme.md)
   - [x] [Configurar DNS local no /etc/hosts](./scripts/local_dns.sh)
@@ -34,6 +33,8 @@
   - [x] [Configuração do Kubectl](./scripts/k8s_requisitos.sh.sh)
   - [x] [Instalação do ISTIO](./istio/)
   - [x] [Configuração do Dashboard com lens](./scripts/k8s_requisitos.sh.sh)
+
+## Gerenciamento dos deployments com Kustomize 
 - [x] [Organizar estrutura de arquivos - Kustomize](./app/Readme.md)
   - [x] [Configurar DNS local para a aplicação no /etc/hosts](./scripts/local_dns.sh)
   - [x] [Criar arquivos base](./app/Readme.md)
@@ -43,7 +44,7 @@
     - [x] [Ambiente de produção](./app/Readme.md)
 - [x] [Apply deployments](./app/Readme.md)
 
-## Gerenciar deploy da aplicação com o `argocd`. 
+## Gerenciamento dos deployments com o `argocd` e kustomize.
   - Serviço Argocd:
     - [x] [Implatação do Argo Cd no cluster kubernetes](./argocd/chart/Readme.md)
     - [x] [Configurar Gateway e virtualservice para expor acesso externo do argo]
