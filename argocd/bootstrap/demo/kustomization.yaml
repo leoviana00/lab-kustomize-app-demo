@@ -5,5 +5,7 @@ kind: Kustomization
 namespace: argocd
 
 bases:
-- ../../components/applicationsets/demo
+- ../../components/applicationsets/demo/development
+- ../../components/applicationsets/demo/staging
+- ../../components/applicationsets/demo/production
 - ../../components/argocdproj/demo
