@@ -1,7 +1,7 @@
 <h1 align="center">Kustomize e Argocd</h1>
 
 <p align="center">
-  <img alt="k8s" src="../images/argocd.drawio.png">
+  <img alt="k8s" src="../images/estrutura.png">
 </p>
 
 ## 🌱 Project
