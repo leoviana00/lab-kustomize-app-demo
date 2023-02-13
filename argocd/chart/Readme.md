@@ -17,7 +17,7 @@ helm install -name argocd argocd/argo-cd -f values.yaml -n argo-cd
 ## Arquivos istio - Gateway e Virtual Service
 
 ```bash
-kubectl apply -f templates/
+kubectl apply -f ingress/
 ```
 
 ## Acessando
