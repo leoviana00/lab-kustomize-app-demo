@@ -37,11 +37,23 @@
 - [x] [Organizar estrutura de arquivos - Kustomize](./app/Readme.md)
   - [x] [Configurar DNS local para a aplicação no /etc/hosts](./scripts/local_dns.sh)
   - [x] [Criar arquivos base](./app/Readme.md)
-  - [x] [ Criar camadas de sobreposição - OVERLAYS](./app/Readme.md)
+  - [x] [Criar camadas de sobreposição - OVERLAYS](./app/Readme.md)
     - [X] [Ambiente de desenvolvimento](./app/Readme.md)
     - [x] [Ambiente de homologação](./app/Readme.md)
     - [x] [Ambiente de produção](./app/Readme.md)
 - [x] [Apply deployments](./app/Readme.md)
+
+## Gerenciar deploy da aplicação com o `argocd`. 
+  - Serviço Argocd:
+    - [x] [Implatação do Argo Cd no cluster kubernetes](./argocd/chart/Readme.md)
+    - [x] [Configurar Gateway e virtualservice para expor acesso externo do argo]
+    - [x] [Configuração de acl e backend para o argocd no balanceador externo]
+  - Aplicação demonstração:
+    - [x] [Subir um serviço Nginx nos 3 ambiente: `dev`, `hom` e `prod`](./argocd/Readme.md)
+    - [x] [Criar arquivos de deployments](./argocd/Readme.md)
+    - [x] [Criar Application e Project para o app demo]
+    - [x] [Criar Gateway e Virtualservice para o app demo]
+    - [x] [Criar estrutura de `bases` e `overlays` para gerenciamento com kustomize]
 
 
 ## 📄 Licença
