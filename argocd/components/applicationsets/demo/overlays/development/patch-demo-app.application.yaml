@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: apps
+  name: demo
   namespace: argo-cd
 spec:
   generators:
@@ -14,7 +14,7 @@ spec:
     metadata:
       name: '{{path.basename}}'
     spec:
-      project: default
+      project: demo
       syncPolicy:
         automated:
           prune: true
@@ -28,6 +28,6 @@ spec:
       source:
         repoURL: https://github.com/leoviana00/lab-kustomize-app-demo.git
         targetRevision: main
-        path: '{{path}}'
+        path: '{{path}}/development'
       destination:
         server: https://kubernetes.default.svc
