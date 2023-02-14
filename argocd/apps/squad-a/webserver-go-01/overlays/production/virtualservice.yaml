@@ -4,7 +4,7 @@ metadata:
   name: webserver-go-01-virtualservice
 spec:
   gateways:
-    - webserver-go-01-prod/squad-a-go-gateway
+    - webserver-prod/squad-a-go-gateway
   hosts:
     - ws.squad.a.go.lab.k8s.io
   http:
