@@ -5,6 +5,8 @@ metadata:
 spec:
   gateways:
     - webserver-go-01-prod/squad-a-go-gateway
+  hosts:
+    - ws.squad.a.go.lab.k8s.io
   http:
     - match:
         - uri:

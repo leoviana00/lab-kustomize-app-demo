@@ -7,7 +7,9 @@ spec:
     app: istio-ingressgateway
   servers:
   - hosts:
-    - squad.a.go.lab.k8s.io
+    - ws.dev.squad.a.go.lab.k8s.io
+    - ws.hom.squad.a.go.lab.k8s.io
+    - ws.squad.a.go.lab.k8s.io
     port:
       name: http
       number: 80
