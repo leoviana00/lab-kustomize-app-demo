@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webserver-go-01
+  labels:
+    app: webserver-go-01
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: webserver-go-01
