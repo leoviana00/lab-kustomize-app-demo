@@ -3,5 +3,4 @@ kind: ConfigMap
 metadata:
   name: webserver-go-01-cfg
 data:
-data:
   bgcolor: "yellow"
