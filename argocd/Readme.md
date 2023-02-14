@@ -42,3 +42,39 @@ kubectl apply -k bootstrap/demo/overlays/default/
 <p align="center">
   <img alt="k8s" src="../images/prod-application.png">
 </p>
+
+## Acessando as aplicações
+
+- Aplicações Nginx - Squad A
+- Produção: http://squad.a.nginx.lab.k8s.io/prod
+
+<p align="center">
+  <img alt="k8s" src="../images/prod-nginx.png">
+</p>
+
+- Homologação: http://squad.a.nginx.lab.k8s.io/hom
+
+<p align="center">
+  <img alt="k8s" src="../images/staging-nginx.png">
+</p>
+
+- Desenvolvimento: http://squad.a.nginx.lab.k8s.io/dev
+
+<p align="center">
+  <img alt="k8s" src="../images/dev-nginx.png">
+</p>
+
+
+- Aplicações Go - Squad A
+- Produção: http://ws.squad.a.go.lab.k8s.io/
+
+<p align="center">
+  <img alt="k8s" src="../images/prod-go.png">
+</p>
+
+- Homologação: http://ws.hom.squad.a.go.lab.k8s.io/
+
+<p align="center">
+  <img alt="k8s" src="../images/staging-go.png">
+</p>
+
