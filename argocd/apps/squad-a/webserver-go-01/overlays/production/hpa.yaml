@@ -7,8 +7,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: webserver-go-01
-  minReplicas: 3
-  maxReplicas: 4
+  minReplicas: 2
+  maxReplicas: 3
   metrics:
     - type: Resource
       resource:
