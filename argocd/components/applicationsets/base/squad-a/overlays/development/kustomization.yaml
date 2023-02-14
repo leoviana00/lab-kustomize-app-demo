@@ -8,7 +8,7 @@ namePrefix: dev-
 
 patchesStrategicMerge:
 - webserver-nginx-01.application.yaml
-# - webserver-go-01.application.yaml
+- webserver-go-01.application.yaml
 
 # patches:
 # - patch: |-

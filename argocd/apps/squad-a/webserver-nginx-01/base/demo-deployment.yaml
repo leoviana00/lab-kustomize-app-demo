@@ -39,13 +39,13 @@ spec:
       volumes:
       - name: webserver-nginx-01
         configMap:
-          name: webserver-nginx-01
+          name: webserver-nginx-01-cfg
           items:
           - key: body
             path: index.html
       - name: nginx-conf
         configMap:
-          name: webserver-nginx-01
+          name: webserver-nginx-01-cfg
           items:
           - key: nginx.conf
             path: default.conf

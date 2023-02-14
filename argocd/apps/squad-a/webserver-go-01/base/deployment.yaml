@@ -13,7 +13,7 @@ spec:
         app: webserver-go-01
     spec:
       containers:
-      - name: webserver-go-01
+      - name: server
         image: cloudacademydevops/webappecho:latest
         command: ["/go/bin/demo"]
         ports:
