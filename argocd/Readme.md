@@ -21,7 +21,7 @@
 ## Subindo as aplicações
 
 ```bash
-kubectl apply -k bootstrap/demo/overlays/default/
+kubectl apply -k bootstrap/overlays/default/
 ```
 
 <p align="center">
