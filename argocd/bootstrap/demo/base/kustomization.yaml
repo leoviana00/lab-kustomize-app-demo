@@ -1,9 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-namespace: argo-cd
-
-resources:
-- ../../../components/argocdproj/demo/base
-- ../../../components/applicationsets/demo/overlays/development
-- ../../../components/applicationsets/demo/overlays/staging
-- ../../../components/applicationsets/demo/overlays/production
