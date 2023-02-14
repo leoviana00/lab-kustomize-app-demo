@@ -8,11 +8,11 @@ resources:
 namespace: demo-app-dev
 
 commonLabels:
-  app: demo-app-dev
+  env: dev
 
-# namePrefix: dev-
+commonAnnotations:
+  note: development deployment of demo-app
 
-# patches using local files
 
 patchesStrategicMerge:
 # Resource and Limits

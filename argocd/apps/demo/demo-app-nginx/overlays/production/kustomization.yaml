@@ -5,10 +5,13 @@ resources:
 - ../../base
 - demo-configmap.yaml
 
-namespace: demo-app-hom
+namespace: demo-app-prod
 
 commonLabels:
-  app: demo-app-hom
+  env: prod
+
+commonAnnotations:
+  note: production deployment of demo-app
 
 # patches using local files
 

@@ -8,7 +8,7 @@ spec:
   http:
     - match:
         - uri:
-            prefix: /hom
+            prefix: /prod
       route:
         - destination:
-            host: demo-app-svc.demo-app-hom.svc.cluster.local
+            host: demo-app-svc.demo-app-prod.svc.cluster.local
