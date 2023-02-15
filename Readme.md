@@ -50,6 +50,11 @@
 - [x] [Apply deployments](./app/Readme.md)
 
 ## Gerenciamento dos deployments com o `argocd` e kustomize.
+
+<p align="center">
+  <img alt="k8s" src="images/demo-app-argo.png">
+</p>
+
   - Serviço Argocd:
     - [x] [Implatação do Argo Cd no cluster kubernetes](https://github.com/leoviana00/lab-argocd-helm-k8s)
     - [x] [Configurar Gateway e virtualservice para expor acesso externo do argo]
