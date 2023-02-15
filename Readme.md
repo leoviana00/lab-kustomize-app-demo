@@ -24,47 +24,38 @@
 - Nginx
 
 ## 🚀 Etapas
-- [x] [Gerar chave ssh](./k8s/keys/README.md)
+## Preparando a infraestrutura
+- [x] [Gerar chave ssh](./scripts/keys_kubespray.sh)
 - [X] [Subir um balanceador com Docker](./loadbalancer/Readme.md)
   - [x] [Configurar DNS local no /etc/hosts](./scripts/local_dns.sh)
   - [x] [Registro de DNS e configuração de backends](./loadbalancer/haproxy/haproxy.cfg)
 - [x] [Subir infra local com vagrant e virtualbox](./Vagrantfile)
 - [x] [Subir um Cluster Kubernetes](./kubespray/kubespray.md)
   - [x] [Configuração do Kubectl](./scripts/k8s_requisitos.sh.sh)
-  - [x] [Instalação do ISTIO](./istio/)
+  - [x] [Instalação do ISTIO](./scripts/k8s_requisitos.sh.sh)
   - [x] [Configuração do Dashboard com lens](./scripts/k8s_requisitos.sh.sh)
 
 ## Gerenciamento dos deployments com Kustomize 
 
-<p align="center">
-  <img alt="k8s" src="images/demo-app.png">
-</p>
-
-- [x] [Organizar estrutura de arquivos - Kustomize](./app/Readme.md)
+- [x] [Subir um serviço Nginx nos 3 ambiente: `dev`, `hom` e `prod`](./demo-app/Readme.md)
+- [x] [Organizar estrutura de arquivos - Kustomize](./demo-app/Readme.md)
   - [x] [Configurar DNS local para a aplicação no /etc/hosts](./scripts/local_dns.sh)
-  - [x] [Criar arquivos base](./app/Readme.md)
-  - [x] [Criar camadas de sobreposição - OVERLAYS](./app/Readme.md)
-    - [X] [Ambiente de desenvolvimento](./app/Readme.md)
-    - [x] [Ambiente de homologação](./app/Readme.md)
-    - [x] [Ambiente de produção](./app/Readme.md)
-- [x] [Apply deployments](./app/Readme.md)
+  - [x] [Criar arquivos base e overlays](./demo-app/Readme.md)
+- [x] [Apply deployments](./demo-app/Readme.md)
 
 ## Gerenciamento dos deployments com o `argocd` e kustomize.
 
-<p align="center">
-  <img alt="k8s" src="images/demo-app-argo.png">
-</p>
-
   - Serviço Argocd:
     - [x] [Implatação do Argo Cd no cluster kubernetes](https://github.com/leoviana00/lab-argocd-helm-k8s)
-    - [x] [Configurar Gateway e virtualservice para expor acesso externo do argo]
-    - [x] [Configuração de acl e backend para o argocd no balanceador externo]
+    - [x] [Configurar Gateway e virtualservice para expor acesso externo do argo](./demo-app-argo/apps/squad-a/webserver-nginx-01/base/demo-istio-gateway.yaml)
+    - [x] [Configuração de acl e backend para o argocd no balanceador externo](./loadbalancer/haproxy/haproxy.cfg)
   - Aplicação demonstração:
-    - [x] [Subir um serviço Nginx nos 3 ambiente: `dev`, `hom` e `prod`](./argocd/Readme.md)
-    - [x] [Criar arquivos de deployments](./argocd/Readme.md)
-    - [x] [Criar Application e Project para o app demo]
-    - [x] [Criar Gateway e Virtualservice para o app demo]
-    - [x] [Criar estrutura de `bases` e `overlays` para gerenciamento com kustomize]
+    - [x] [Subir um serviço Nginx nos 3 ambiente: `dev`, `hom` e `prod`](./demo-app-argo/Readme.md)
+    - [x] [Subir um serviço GO nos 3 ambiente: `dev`, `hom` e `prod`](./demo-app-argo/Readme.md)
+    - [x] [Criar arquivos de deployments](./demo-app-argo/Readme.md)
+    - [x] [Criar Application e Project para o app demo](./demo-app-argo/Readme.md)
+    - [x] [Criar Gateway e Virtualservice para o app demo](./demo-app-argo/Readme.md)
+    - [x] [Criar estrutura de `bases` e `overlays` para gerenciamento com kustomize](./demo-app-argo/Readme.md)
 
 
 ## 📄 Licença

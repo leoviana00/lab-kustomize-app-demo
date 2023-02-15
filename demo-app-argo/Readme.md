@@ -1,22 +1,33 @@
 <h1 align="center">Kustomize e Argocd</h1>
 
 <p align="center">
-  <img alt="k8s" src="../images/estrutura.png">
+  <img alt="k8s" src="../images/argocd.drawio.png">
 </p>
+
 
 ## 🌱 Project
 
 - Laboratório para deploy de aplicações utilizando kustomize e argocd
 
-## Estrutura dos arquivos
-<p align="center">
-  <img alt="k8s" src="../images/argo-kustomize.png">
-</p>
+## Estrutura 
+
+1. Bootstrap
 
 <p align="center">
-  <img alt="k8s" src="../images/argocd.drawio.png">
+  <img alt="k8s" src="../images/bootstrap.png">
 </p>
 
+2. Componentes
+
+<p align="center">
+  <img alt="k8s" src="../images/componentes.png">
+</p>
+
+3. Apps
+
+<p align="center">
+  <img alt="k8s" src="../images/apps.png">
+</p>
 
 ## Subindo as aplicações
 
