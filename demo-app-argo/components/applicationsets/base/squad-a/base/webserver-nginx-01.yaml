@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: >-
       https://github.com/leoviana00/lab-kustomize-app-demo.git
-    path: argocd/apps/squad-a/webserver-nginx-01/overlays/default
+    path: demo-app-argo/apps/squad-a/webserver-nginx-01/overlays/default
     targetRevision: main
     kustomize:
       commonAnnotations:
