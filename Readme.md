@@ -35,6 +35,11 @@
   - [x] [Configuração do Dashboard com lens](./scripts/k8s_requisitos.sh.sh)
 
 ## Gerenciamento dos deployments com Kustomize 
+
+<p align="center">
+  <img alt="k8s" src="images/demo-app.png">
+</p>
+
 - [x] [Organizar estrutura de arquivos - Kustomize](./app/Readme.md)
   - [x] [Configurar DNS local para a aplicação no /etc/hosts](./scripts/local_dns.sh)
   - [x] [Criar arquivos base](./app/Readme.md)
@@ -45,6 +50,11 @@
 - [x] [Apply deployments](./app/Readme.md)
 
 ## Gerenciamento dos deployments com o `argocd` e kustomize.
+
+<p align="center">
+  <img alt="k8s" src="images/demo-app-argo.png">
+</p>
+
   - Serviço Argocd:
     - [x] [Implatação do Argo Cd no cluster kubernetes](https://github.com/leoviana00/lab-argocd-helm-k8s)
     - [x] [Configurar Gateway e virtualservice para expor acesso externo do argo]
