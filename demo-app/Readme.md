@@ -6,6 +6,12 @@
   <img alt="tree" src="../images/tree.png">
 </p>
 
+- Diagrama estrutural
+
+<p align="center">
+  <img alt="tree" src="../images/demo-app.png">
+</p>
+
 ## Apply
 
 - Criando namespaces
