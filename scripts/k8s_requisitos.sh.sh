@@ -27,16 +27,7 @@ setup_istio() {
     echo "Istio is running!"
 }
 
-setup_argocd() {
-    echo "Setting up argocd ..."
-    kubectl create namespace argocd
-    kubectl label namespace argocd istio-injection=enabled --overwrite
-    kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-    echo "Argocd is running!"
-}
-
-
 config_kubectl
 install_helm
 setup_istio
-setup_argocd
+
