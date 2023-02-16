@@ -1,0 +1,17 @@
+---
+
+namespace: nginx-index
+
+resources:
+- namespace.yaml
+- deployment.yaml
+- service.yaml
+
+configMapGenerator:
+- name: nginx-cm
+  namespace: default
+  files:
+  - cm-index.html
+
+generatorOptions:
+  disableNameSuffixHash: true

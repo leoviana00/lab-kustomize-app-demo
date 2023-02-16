@@ -1,0 +1,16 @@
+---
+
+# colocar objetos em seu próprio namespace
+namespace: reloader
+
+resources:
+- namespace.yaml
+- https://github.com/stakater/Reloader/deployments/kubernetes
+
+patches:
+# use patch para remover namespace de objetos sem namespace, o que geraria erro
+- target:
+    kind: "Cluster.*|ServiceAccount.*"
+  patch: |-
+    - op: remove
+      path: /metadata/namespace
