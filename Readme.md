@@ -35,6 +35,9 @@
   - [x] [Instalação do ISTIO](./scripts/k8s_requisitos.sh.sh)
   - [x] [Configuração do Dashboard com lens](./scripts/k8s_requisitos.sh.sh)
 
+## Estudo prático do kustomize
+
+- [x] [Estudo do uso de kustomize com sobreposições](./kustomize-overlays/Readme.md)
 
 ## Gerenciamento dos deployments com Kustomize 
 
@@ -43,10 +46,6 @@
   - [x] [Configurar DNS local para a aplicação no /etc/hosts](./scripts/local_dns.sh)
   - [x] [Criar arquivos base e overlays](./demo-app/Readme.md)
 - [x] [Apply deployments](./demo-app/Readme.md)
-
-## Estudo prático do kustomize
-
-- [x] [Estudo do uso de kustomize com sobreposições](./kustomize-overlays/Readme.md)
 
 ## Gerenciamento dos deployments com o `argocd` e kustomize.
 
