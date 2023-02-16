@@ -35,6 +35,10 @@
   - [x] [Instalação do ISTIO](./scripts/k8s_requisitos.sh.sh)
   - [x] [Configuração do Dashboard com lens](./scripts/k8s_requisitos.sh.sh)
 
+## Estudo prático do kustomize
+
+- [x] [Estudo do uso de kustomize com sobreposições](./kustomize-overlays/Readme.md)
+
 ## Gerenciamento dos deployments com Kustomize 
 
 - [x] [Subir um serviço Nginx nos 3 ambiente: `dev`, `hom` e `prod`](./demo-app/Readme.md)
